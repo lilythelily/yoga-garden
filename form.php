@@ -17,7 +17,6 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
         <img src="./assets/icons/x-outline.svg" alt="close" class="close-btn">
         <ul class="nav-ul">
             <li>Home<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
-            <li>Search<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
             <li>Online Classes<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
       
 </ul>
@@ -51,7 +50,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
 <!-- input 1 -->
 <div class="input-field">
 <label for="first-name"><img src="./assets/icons/user-profile-02.svg" alt="profile">First Name<span>*</span></label>
-    <input type="text" name="first-name" id="first-name" placeholder="Jane">
+    <input type="text" name="first-name" id="first-name" placeholder="Jane"  class="form-input">
   <p class="error">This field is required.</p>
 </div>
   
@@ -59,22 +58,22 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
     <!-- input 2 -->
 <div class="input-field">
 <label for="last-name"><img src="./assets/icons/user-profile-02.svg" alt="profile">Last Name<span>*</span></label>
-    <input type="text" name="last-name" id="last-name" placeholder="Brown">  <p class="error">This field is required.</p></div>
+    <input type="text" name="last-name" id="last-name" placeholder="Brown"  class="form-input">  <p class="error">This field is required.</p></div>
 
     <!-- input 3 -->
 <div class="input-field">
 <label for="email"><img src="./assets/icons/email-gray.svg" alt="email">Email<span>*</span></label>
-    <input type="text" name="email" id="email" placeholder="jane@gmail.com">  <p class="error">This field is required.</p></div>
+    <input type="text" name="email" id="email" placeholder="jane@gmail.com" class="form-input">  <p class="error">This field is required.</p></div>
 
     <!-- input 4 -->
 <div class="input-field">
 <label for="address"><img src="./assets/icons/locator-gray.svg" alt="locator">Address<span>*</span></label>
-    <input type="text" name="address" id="address" placeholder="1234 Green Road London">  <p class="error">This field is required.</p></div>
+    <input type="text" name="address" id="address" placeholder="1234 Green Road London"  class="form-input">  <p class="error">This field is required.</p></div>
 
     <!-- input 5 -->
 <div class="input-field">
 <label for="skill"><img src="./assets/icons/marker-01.svg" alt="flag">Yoga Skill Level</label>
-    <input type="text" name="skill" id="skill" placeholder="Intermediate"></div>
+    <input type="text" name="skill" id="skill" placeholder="Intermediate"  class="form-input"></div>
 
     <!-- input 6 -->
 <div class="input-field">
@@ -100,7 +99,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
 
 
     <div class="btn-modal">
-     <button type="submit" class="submit-btn">Submit<img src="./assets/icons/send-01.svg" alt="send"></button>
+     <button type="click" class="submit-btn">Submit<img src="./assets/icons/send-01.svg" alt="send"></button>
 <div class="thanks-modal">
     <p class="thanks-title">Thank you for your request!</p>
     <p class="thanks-small">We will get back to you ASAP.</p>
@@ -119,6 +118,6 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
     <img src="./assets/logo.svg" alt="logo" class="footer-logo">
     <p class="copyright">©2025 Yoga Garden All Rights Reserved</p>
 </footer>
-
+<script src="./js/form.js"></script>
 </body>
 </html>

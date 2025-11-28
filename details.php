@@ -17,7 +17,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
         <img src="./assets/icons/x-outline.svg" alt="close" class="close-btn">
         <ul class="nav-ul">
             <li>Home<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
-            <li>Search<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
+
             <li>Online Classes<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
       
 </ul>
@@ -143,5 +143,6 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
     <p class="copyright">©2025 Yoga Garden All Rights Reserved</p>
 </footer>
 
+<script src="./js/details.js"></script>
 </body>
 </html>

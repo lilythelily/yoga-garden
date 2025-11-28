@@ -16,7 +16,6 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
         <img src="./assets/icons/x-outline.svg" alt="close" class="close-btn">
         <ul class="nav-ul">
             <li>Home<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
-            <li>Search<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
             <li>Online Classes<img src="./assets/icons/chevron-right.svg" alt="chevron"></li>
       
 </ul>
@@ -56,7 +55,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
              <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
         </div>
 
-<button type="button" class="trial-btn">Try for Free<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
+<button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
 
         <!-- card 2 -->
 
@@ -72,7 +71,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
              <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
         </div>
 
-        <button type="button" class="trial-btn">Try for Free<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
+        <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
 
 
         <!-- --card3-- -->
@@ -88,7 +87,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
              <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
         </div>
 
-        <button type="button" class="trial-btn">Try for Free<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
+        <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
     </section>
 
 
@@ -106,6 +105,6 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
     <img src="./assets/logo.svg" alt="logo" class="footer-logo">
     <p class="copyright">©2025 Yoga Garden All Rights Reserved</p>
 </footer>
-
+<script src="./js/search-results.js"></script>
 </body>
 </html>

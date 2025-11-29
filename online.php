@@ -1,10 +1,20 @@
 
 <?php
 
-$name = "Eternity Yoga Studio";
-$location = "Yokohama";
-$class = "Day & Night";
-$description = "Experienced Yoga instuctors walks you through from basic to advance."
+require 'database.php';
+$sql = "SELECT id, name, location, fee, imgUrl, address, hour, days, level, onlineClass, oneToone, freeTrial, instructor, weekend, weekday, hotYoga, instImg FROM studios";
+$result = mysqli_query($conn, $sql);
+$data = array();
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+}
+
+$jsonData = json_encode($data);
+
+
+mysqli_close($conn);
 ?>
 <html lang="en">
 <head>
@@ -33,72 +43,22 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
 
 <main>
 
-<div class="results">
-    <p class="results-for">Search results for:</p>
-    <p class="results-output">Online Classes</p>
-</div>
-    <section class="section__results-cards">
 
-    <!-- card1 -->
-     <div class="section__cards-item"> <a href="details.php">
-            <div class="section__cards-img"></div>
-            <p class="section__cards-title">Lotus Yoga Studio</p>
-            <div class="location-fee">
-            <p class="section__cards-location"><img src="./assets/icons/locator-gray.svg" alt="marker">Wigan</p>
-            <p class="section__cards-fee"><img src="./assets/icons/currency-coin-pound.svg" alt="pound">£15 / hour</p></div>
-
-        <div class="tags-container">
-            <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-        </div>
-
-<button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
-
-        <!-- card 2 -->
-
-         <div class="section__cards-item"><a href="details.php">
-            <div class="section__cards-img"></div>
-            <p class="section__cards-title">Lotus Yoga Studio</p>
-            <div class="location-fee">
-            <p class="section__cards-location"><img src="./assets/icons/locator-gray.svg" alt="marker">Wigan</p>
-            <p class="section__cards-fee"><img src="./assets/icons/currency-coin-pound.svg" alt="pound">£15 / hour</p></div>
-
-        <div class="tags-container">
-            <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-        </div>
-
-        <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
-
-
-        <!-- --card3-- -->
-         <div class="section__cards-item"><a href="details.php">
-            <div class="section__cards-img"></div>
-            <p class="section__cards-title">Lotus Yoga Studio</p>
-            <div class="location-fee">
-            <p class="section__cards-location"><img src="./assets/icons/locator-gray.svg" alt="marker">Wigan</p>
-            <p class="section__cards-fee"><img src="./assets/icons/currency-coin-pound.svg" alt="pound">£15 / hour</p></div>
-
-        <div class="tags-container">
-            <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-             <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-        </div>
-
-        <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
-    </section>
-
-
-    <!-- online class -->
-    <section class="section__online">
+  <!-- online class -->
+    <section class="section__online" id="section__online-header">
         <div class="section__online-img"></div>
         <div class="h3-btn">
-        <h3>Practice Yoga at Home?</h3>
-        <button type="button" class="online-btn">Browse Online Classes<img src="./assets/icons/arrow-green.svg" alt="arrow"></button></div>
+        <h3 id="section__online-h3">Practice Yoga at Home!</h3>
+        <!-- <button type="button" class="online-btn">Browse Online Classes<img src="./assets/icons/arrow-green.svg" alt="arrow"></button></div> -->
     </section>
+
+    <section class="section__results-cards">
+
+
+    </section>
+
+
+  
 
 </main>
 
@@ -106,6 +66,7 @@ $description = "Experienced Yoga instuctors walks you through from basic to adva
     <img src="./assets/logo.svg" alt="logo" class="footer-logo">
     <p class="copyright">©2025 Yoga Garden All Rights Reserved</p>
 </footer>
-<script src="./js/search-results.js"></script>
+<script>var yogaData = <?php echo $jsonData; ?>;</script>
+<script src="./js/online.js"></script>
 </body>
 </html>

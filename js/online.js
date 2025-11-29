@@ -3,17 +3,15 @@
 const hamburger = document.querySelector(".hamburger-menu");
 const menuPanel = document.querySelector("nav");
 const closeBtn = document.querySelector(".close-btn");
-const locationSearch = document.querySelector(".location-search");
-const keywordSearch = document.querySelector(".keyword-search");
-const locationIcon = document.querySelector(".location-icon");
-const keywordIcon = document.querySelector(".keyword-icon");
 const searchIcon1 = document.querySelector(".search-icon");
-const searchIcon2 = document.querySelector(".search-icon2");
+const headerLogo = document.querySelector(".header-logo");
+const footerLogo = document.querySelector(".footer-logo");
 
 // handle hamburger panel
 
 hamburger.addEventListener("click", () => {
   menuPanel.classList.add("flex");
+  menuPanel.style.marginTop = "32px";
 });
 
 closeBtn.addEventListener("click", () => {
@@ -22,47 +20,43 @@ closeBtn.addEventListener("click", () => {
 
 // search box handling
 
-locationSearch.addEventListener("click", () => {
-  locationIcon.classList.add("hide");
-});
-
-keywordSearch.addEventListener("click", () => {
-  keywordIcon.classList.add("hide");
-});
-
 function resultPage() {
   location.href = "./search-results.php";
 }
 
 searchIcon1.addEventListener("click", resultPage);
-searchIcon2.addEventListener("click", resultPage);
+
+
+// back to home
+
+function toHome() {
+  location.href = "./index.php";
+}
+
+headerLogo.addEventListener("click", toHome);
+footerLogo.addEventListener("click", toHome);
 
 // ---nav link control---
 
 const nav = document.querySelector(".nav-ul");
 
-function toHome() {
-  location.href = "./index.php";
-}
 function toOnline() {
   location.href = "./online.php";
 }
 
-nav.firstElementChild.addEventListener("click", toHome);
-nav.lastElementChild.addEventListener("click", toOnline);
+nav.firstElementChild.addEventListener('click', toHome);
+nav.lastElementChild.addEventListener('click', toOnline);
 
-// --- online link-- -
-
-const onlineBtn = document.querySelector(".online-btn");
-
-onlineBtn.addEventListener("click", toOnline);
 
 // === data population ===
 
-const cardContainer = document.querySelector(".section__cards");
+const cardContainer = document.querySelector(".section__results-cards");
 
-yogaData.forEach((data) => {
-  const cardHTML = `
+const onlineData = yogaData.filter((data) => data.onlineClass == 'Available');
+
+onlineData.forEach((data) => {
+
+const cardHTML = `
   <div class="section__cards-item">
             <a href="details.php">
             <div><img src="${data.imgUrl}" class="section__cards-img"></div>
@@ -78,8 +72,8 @@ yogaData.forEach((data) => {
 <div class="tags-container">
 
 <div class="tag-item" style = "${
-    data.freeTrial == "Available" ? "display:flex;" : "display:none"
-  }">${data.freeTrial == "Available" ? "&#10003 Free Trial" : ""}</div>
+  data.freeTrial == "Available" ? "display:flex;" : "display:none"
+}">${data.freeTrial == "Available" ? "&#10003 Free Trial" : ""}</div>
   
   
   <div class="tag-item" style = "${
@@ -106,5 +100,5 @@ yogaData.forEach((data) => {
 
         <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a>
   `;
-  cardContainer.innerHTML += cardHTML;
-});
+    cardContainer.innerHTML += cardHTML;
+  });

@@ -38,10 +38,12 @@ mysqli_close($conn);
 <header><img src="./assets/logo.svg" alt="logo" class="header-logo">
 <div class="hamburger"><img src="./assets/icons/menu-03.svg" alt="menu" class="hamburger-menu"></div>
 </header>
+
+
+<!-- ---hero--- -->
    
 <div class="hero">
     <h1>Find Your Perfect Yoga Class</h1>
-    <!-- <h2>Cultivate your <br>inner peace</h2> -->
 
 
 <div class="search-box">
@@ -55,29 +57,20 @@ mysqli_close($conn);
 </div></div>
 
 <main>
+
+<div class="no-results-modal"><img src="./assets/icons/no-results.svg" alt="no-results" class="no-icon"><p class="no-results-msg">No results found...</p></div>
     <section class="section__cards">
-
-    <!-- card1 -->
-     
-        <!-- <div class="section__cards-item">
-            <a href="details.php">
-            <div><img src="" class="section__cards-img"></div>
-            <p class="section__cards-title"></p>
-            <div class="location-fee">
-            <p class="section__cards-location"><img src="./assets/icons/locator-gray.svg" alt="marker"></p>
-            <p class="section__cards-fee"><img src="./assets/icons/currency-coin-pound.svg" alt="pound">£ / hour</p></div>
-
-        <div class="tags-container">
-            <div class="tag-item"><img src="./assets/icons/check-green.svg" alt="check">Free Trial</div>
-            
-        </div>
-
-        <button type="button" class="trial-btn">More<img src="./assets/icons/arrow-white.svg" alt="arrow"></button></div></a> -->
 
         
     </section>
 
+    <!-- ---details display--- -->
+    <section class="section__details"></section>
 
+
+    <!-- ---FORM--- -->
+     <form method="post">
+</form>
     <!-- online class -->
     <section class="section__online">
         <div class="section__online-img"></div>

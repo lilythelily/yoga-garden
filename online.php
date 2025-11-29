@@ -34,9 +34,7 @@ mysqli_close($conn);
 </head>
 <body>
 
-<header class="details-header"><img src="./assets/logo.svg" alt="logo" class="header-logo">    <div class="input-icon">
-    <input type="text" class="search-field" placeholder="Search"><div class="search-icon"></div></div>
-<div class="search-icon-mobile"></div>
+<header class="details-header"><img src="./assets/logo.svg" alt="logo" class="header-logo">    
 <div class="hamburger"><img src="./assets/icons/menu-03.svg" alt="menu" class="hamburger-menu"></div>
 </header>
    
@@ -49,14 +47,21 @@ mysqli_close($conn);
         <div class="section__online-img"></div>
         <div class="h3-btn">
         <h3 id="section__online-h3">Practice Yoga at Home!</h3>
-        <!-- <button type="button" class="online-btn">Browse Online Classes<img src="./assets/icons/arrow-green.svg" alt="arrow"></button></div> -->
+
     </section>
 
     <section class="section__results-cards">
 
 
     </section>
+    
+ <!-- ---details display--- -->
+    <section class="section__details"></section>
 
+
+    <!-- ---FORM--- -->
+     <form method="post">
+</form>
 
   
 

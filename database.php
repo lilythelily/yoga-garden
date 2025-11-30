@@ -11,6 +11,27 @@ if($conn->connect_error){
 }
 // echo "Connected Successfully";
 
+// === CREATE A TABLE ===
+
+// $sql = "CREATE TABLE test (
+//   item VARCHAR(200)
+// )";
+
+// if ($conn->query($sql) === TRUE) {
+// echo "created";
+// } else {
+//  echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+// === Delete a table ===
+// $sql = "DROP TABLE form";
+
+// if ($conn->query($sql) === TRUE) {
+// echo "deleted";
+// } else {
+// echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
 // === DELETE DATA ===
 
 // $idsToDelete = [3, 7];
@@ -26,13 +47,26 @@ if($conn->connect_error){
 // }
 
 // === INSERT NEW DATA ===
-// $sql = "INSERT INTO studios (id, name, location, fee, imgUrl, address, hour, days, level, onlineClass, oneToone, freeTrial, instructor, weekend, weekday, hotYoga, instImg) VALUES ('7', 'Oneness Yoga Studio', 'Luton', '12', 'https://res.cloudinary.com/djo3dd9eh/image/upload/v1764205620/yoga-class7_kqyffb.jpg', '818 St. John’s Road\nLuton\nLU55 7UG', '09:00 - 17:00', 'Mon to Sun', 'Beginner Friendly', 'Available', 'Available', 'Available', 'Frederika Skinner', 'Available', 'Available', 'Not Available', 'https://res.cloudinary.com/djo3dd9eh/image/upload/v1764205614/instructor7_kti9me.jpg');";
+// $sql = "INSERT INTO form (id, firstname, lastname, email, address, yogaskill, schedule, message) VALUES ('7','Tiim', 'Cyan', 'tim@gmail.com', '562 George Street Colchester CO14 1VH', 'Beginner', 'Dec 03 2025', '');";
+
+// if ($conn->query($sql) === TRUE) {
+// echo "added";
+// } else {
+//  echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+// === Alter Table ===
+// $sql = "ALTER TABLE form MODIFY id INT AUTO_INCREMENT PRIMARY KEY";
+
+// if ($conn->query($sql) === TRUE) {
+// echo "altered";
+// } else {
+// echo "Error: " . $sql . "<br>" . $conn->error;
+// }
 
 // === UPDATE DATA ===
 
-// $sql = "UPDATE studios SET imgUrl = 'https://res.cloudinary.com/djo3dd9eh/image/upload/v1764205620/yoga-class5_th1o67.jpg
-
-// ' WHERE name='Awakening Yoga'";
+// $sql = "UPDATE studios SET instructor = 'Jeremy Hirst' WHERE name='Sacred Balance Studio'";
 
 
 // if ($conn->query($sql) === TRUE) {

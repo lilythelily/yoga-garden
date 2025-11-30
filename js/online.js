@@ -251,7 +251,7 @@ onlineData.forEach((data) => {
         flex(form);
         form.innerHTML = `
 <div class="h1-card">
-<h1 class="form-h1">Request a Free Trial</h1>
+<h1 class="form-h1">Contact Form</h1>
 
 <div class="small-card">
     <div class="small-card-img" style="background-image:url(${targetData.imgUrl})"></div>
@@ -280,7 +280,7 @@ onlineData.forEach((data) => {
     <!-- input 3 -->
 <div class="input-field">
 <label for="email"><img src="./assets/icons/email-gray.svg" alt="email">Email<span>*</span></label>
-    <input type="text" name="email" id="email" placeholder="jane@gmail.com" class="form-input">  <p class="error">This field is required.</p></div>
+    <input type="email" name="email" id="email" placeholder="jane@gmail.com" class="form-input">  <p class="error">This field is required.</p></div>
 
     <!-- input 4 -->
 <div class="input-field">
@@ -294,7 +294,7 @@ onlineData.forEach((data) => {
 
     <!-- input 6 -->
 <div class="input-field">
-<label for="schedule"><img src="./assets/icons/calendar-02.svg" alt="calendar">Please select<span>*</span></label>
+<label for="schedule"><img src="./assets/icons/calendar-02.svg" alt="calendar">Book a free trial<span>*</span></label>
 <select name="schedule" id="schedule">  
 <option value="">Please select</option>
     <option value="24 Nov">24 Nov 2025 | 09:30 - 10:30</option>
